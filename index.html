@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <title>I Nostri Anni</title>
 
-  <!-- Font romantico -->
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Crimson+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Font calligrafico + serif elegante -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
       padding: 0;
-      font-family: "Crimson Pro", serif;
-      background: #f8e9ef;
+      font-family: "Playfair Display", serif;
+      background: linear-gradient(to bottom, #f9e9ef, #f7dfe8);
       color: #5a3b4e;
       display: flex;
       justify-content: center;
@@ -23,124 +23,19 @@
     }
 
     .container {
-      max-width: 750px;
+      max-width: 780px;
       background: #ffffffd9;
-      padding: 50px;
-      border-radius: 20px;
-      box-shadow: 0 0 30px rgba(0,0,0,0.08);
-      backdrop-filter: blur(5px);
+      padding: 60px;
+      border-radius: 24px;
+      box-shadow: 0 0 40px rgba(0,0,0,0.08);
+      backdrop-filter: blur(6px);
       animation: fadeIn 1.2s ease;
       text-align: center;
+      border: 2px solid #e8c6d3;
     }
 
     h1 {
       font-family: "Great Vibes", cursive;
-      font-size: 3.2rem;
-      margin-bottom: 30px;
-      color: #a05c85;
-      letter-spacing: 1px;
-    }
-
-    p {
-      white-space: pre-line;
-      line-height: 1.65;
-      font-size: 1.2rem;
-    }
-
-    /* Petali che cadono */
-    .petal {
-      position: fixed;
-      top: -10px;
-      color: #e7a7b8;
-      font-size: 22px;
-      animation: fall linear infinite;
-      opacity: 0.85;
-      transform: rotate(15deg);
-    }
-
-    @keyframes fall {
-      0% { transform: translateY(-10vh) translateX(0) rotate(0deg); }
-      100% { transform: translateY(110vh) translateX(30px) rotate(360deg); }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
-</head>
-
-<body>
-
-  <!-- Petali generati -->
-  <script>
-    const petals = 25;
-    const symbols = ["❀", "✿", "❁", "❃"];
-    for (let i = 0; i < petals; i++) {
-      let petal = document.createElement("div");
-      petal.classList.add("petal");
-      petal.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
-      petal.style.left = Math.random() * 100 + "vw";
-      petal.style.animationDuration = 5 + Math.random() * 6 + "s";
-      petal.style.fontSize = 18 + Math.random() * 20 + "px";
-      document.body.appendChild(petal);
-    }
-  </script>
-
-  <div class="container">
-    <h1>NOSTRI ANNI</h1>
-
-    <p>
-Stessa suora, stessa torta all'acquetta
-Stessa Filo che vien dentro ci serve e poi va
-Non lo so, che faccio qui
-Studio un po
-e vedo le formule brute che mi Guardano e 
-Sembrano chiedermi andiamo all'esame noi?
-
-Gli anni d'oro del grande Re Stefan
-Gli anni della Ludo e di Giulia
-Gli anni della Tiny e delle sue manie
-Gli anni in cucinino sempre in più di due
-Gli anni di che belle le tisanin
-Gli anni di Michele e dei suoi Sorrisi
-Gli anni del qualsiasi cosa fai
-Gli anni del "tranquilla, siam qui noi" siamo qui noi
-
-Stessa gente, ma la storia cambierà
-Con la laurea siamo ognuna in un' altra città
-Pandemia! ma senti un po
-Sai che c’è 
-Un po di Pic-tio-nary dai mi va 
-Ed è cosi che le pupe ritornano a volar!
-
-Gli anni immensi che han portato qui,
-Gli anni di quei sogni detti lì. 
-Gli anni delle notti a confidarsi,
-Gli anni del coraggio di cercarsi.
-Gli anni in cui la vita ti dirà
-Che l’amore vero ci sarà.
-Gli anni del “qualsiasi cosa avrai”, 
-Gli anni del “tranquilla, siam qui noi”. 
-Siamo qui noi.
-
-Stessa storia, stessi viaggi fatti poi.
-A Bologna e quelle statue che dicevi “oi”.
-Pordenone, anni 90 
-Poi a Lignano, 
-Con la tempesta, quel ramo e poi 
-Pian piano vedi che l’alba arriva anche per noi.
-
-Gli anni nuovi iniziano da te,
-Gli anni che oggi vivi insieme a Ste.
-Gli anni con un brindisi così,
-Gli anni a festeggiare il vostro sì.
-Gli anni di ogni strada che verrà,
-Gli anni di ogni bella novità.
-Gli anni di un ricordo da trofeo:
-“Dietro liceo… davanti museo!”
-    </p>
-  </div>
-
-</body>
-</html>
+      font-size: 3.6rem;
+      margin-bottom: 35px;
+      color
