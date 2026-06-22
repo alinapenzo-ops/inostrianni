@@ -3,11 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <title>I Nostri Anni</title>
+
+  <!-- Font romantico -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Crimson+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
       padding: 0;
-      font-family: "Georgia", serif;
+      font-family: "Crimson Pro", serif;
       background: #f8e9ef;
       color: #5a3b4e;
       display: flex;
@@ -30,7 +34,8 @@
     }
 
     h1 {
-      font-size: 2.4rem;
+      font-family: "Great Vibes", cursive;
+      font-size: 3.2rem;
       margin-bottom: 30px;
       color: #a05c85;
       letter-spacing: 1px;
@@ -38,23 +43,24 @@
 
     p {
       white-space: pre-line;
-      line-height: 1.6;
-      font-size: 1.15rem;
+      line-height: 1.65;
+      font-size: 1.2rem;
     }
 
-    /* Cuori che cadono */
-    .heart {
+    /* Petali che cadono */
+    .petal {
       position: fixed;
       top: -10px;
-      color: #e38aae;
-      font-size: 20px;
+      color: #e7a7b8;
+      font-size: 22px;
       animation: fall linear infinite;
-      opacity: 0.8;
+      opacity: 0.85;
+      transform: rotate(15deg);
     }
 
     @keyframes fall {
-      0% { transform: translateY(-10vh) translateX(0); }
-      100% { transform: translateY(110vh) translateX(20px); }
+      0% { transform: translateY(-10vh) translateX(0) rotate(0deg); }
+      100% { transform: translateY(110vh) translateX(30px) rotate(360deg); }
     }
 
     @keyframes fadeIn {
@@ -66,17 +72,18 @@
 
 <body>
 
-  <!-- Cuori generati -->
+  <!-- Petali generati -->
   <script>
-    const hearts = 25; 
-    for (let i = 0; i < hearts; i++) {
-      let heart = document.createElement("div");
-      heart.classList.add("heart");
-      heart.innerHTML = "❤";
-      heart.style.left = Math.random() * 100 + "vw";
-      heart.style.animationDuration = 4 + Math.random() * 6 + "s";
-      heart.style.fontSize = 15 + Math.random() * 20 + "px";
-      document.body.appendChild(heart);
+    const petals = 25;
+    const symbols = ["❀", "✿", "❁", "❃"];
+    for (let i = 0; i < petals; i++) {
+      let petal = document.createElement("div");
+      petal.classList.add("petal");
+      petal.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+      petal.style.left = Math.random() * 100 + "vw";
+      petal.style.animationDuration = 5 + Math.random() * 6 + "s";
+      petal.style.fontSize = 18 + Math.random() * 20 + "px";
+      document.body.appendChild(petal);
     }
   </script>
 
